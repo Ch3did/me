@@ -8,12 +8,12 @@ up:
 	docker compose up -d
 
 ## Para os containers
-down:
+stop:
 	docker compose down
 
 ## Mostra os logs do container app
 logs:
 	docker logs -f $(CONTAINER_NAME)
 
-## Reinicia (down + up)
-restart: down up
+## Reinicia
+restart: down up logs
