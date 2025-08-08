@@ -76,7 +76,7 @@ const en = {
     "project5": {
       "title": "Me (Eu)",
       "description": "This portfolio that you are currently viewing...",
-      "technologies": ["Node", "React", "Vite", "Docker"],
+      "technologies": ["Typescript",  "React", "Vite", "Docker"],
       "status": "Complete",
       "url": "https://github.com/Ch3did/me"
     },

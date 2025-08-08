@@ -76,7 +76,7 @@ const pt = {
       "project5": {
         "title": "Me (Eu)",
         "description": "Este Portifólio que está vendo...",
-        "technologies": ["Node", "React", "Vite", "Docker"],
+        "technologies": ["Typescript",  "React", "Vite", "Docker"],
         "status": "Complete",
         "url": "https://github.com/Ch3did/me"
       },
