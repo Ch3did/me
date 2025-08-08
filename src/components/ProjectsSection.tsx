@@ -6,7 +6,7 @@ import { Github } from "lucide-react";
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "financial-cli",
+      title: "Financial Cli",
       description: "Este projeto é uma releitura do Financial-Manager, originalmente feito em Python, agora reescrito em Go, com arquitetura baseada em DDD",
       technologies: ["Golang", "Gorm", "Sqlite3"],
       status: "v1",
@@ -14,35 +14,35 @@ const ProjectsSection = () => {
     },
     {
       title: "Monetary Maid",
-      description: "Easie financial control CLI with nubank integration and category selection",
+      description: "Interface de linha de comando (CLI) para controle financeiro simplificado, com integração ao Nubank e seleção de categorias. A aplicação recebe um arquivo OFX como input, realiza ajustes nos dados e os categoriza automaticamente.",
       technologies: ["Python", "Sqlmodel", "Click", "Sqlite3"],
       status: "v1",
       url: "https://github.com/Ch3did/Financial-Manager"
     },
     {
-      title: "New-York-Times-Article-Crawler",
-      description: "Crawling the New York Times website and extracting article data. The application uses Selenium and a WebDriver to interact with the website and retrieve information such as the title, description, date, picture, and picture URL. The application also provides filters for data based on month, specific words, and NYT-sections.",
+      title: "New York Times Article Crawler",
+      description: "Raspando o site do New York Times e extraindo dados dos artigos. A aplicação utiliza Selenium e um WebDriver para interagir com o site e recuperar informações como título, descrição, data, imagem e URL da imagem. A aplicação também oferece filtros para os dados com base em mês, palavras específicas e seções do NYT.",
       technologies: ["Python3", "Selenium", "Pydantic", "Requests"],
       status: "Complete",
       url: "https://github.com/Ch3did/New-York-Times-Article-Crawler"
     },
     {
-      title: "Developer-Allocation-API",
+      title: "Developer Allocation-API",
       description: "A Developer Allocation API é uma aplicação escrita em Django, projetada para gerenciar e realizar a alocação de desenvolvedores de software em projetos. O principal objetivo da API é assegurar que os gerentes de projeto possam alocar desenvolvedores de forma eficiente, levando em conta suas especializações e as necessidades dos projetos.",
       technologies: ["Python3", "Django", "DRF", "Postgres", "Pytest", "Docker"],
       status: "Complete",
       url: "https://github.com/Ch3did/Developer-Allocation-API/"
     },
     {
-      title: "me",
-      description: "Este Portifólio",
+      title: "Me (Eu)",
+      description: "Este Portifólio que está vendo...",
       technologies: ["Node", "React", "Vite", "Docker"],
       status: "Complete",
       url: "https://github.com/Ch3did/me"
     },
     {
-      title: "install",
-      description: "Shell scritp to install tools/configurations for new ubuntu's machine.",
+      title: "Install",
+      description: "Shell scritp para instalar ferramentas e setando configurações para novas máquinas Ubuntu.",
       technologies: ["Sh"],
       status: "Complete",
       url: "https://github.com/Ch3did/Install"
