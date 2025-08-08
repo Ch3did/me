@@ -49,18 +49,21 @@ const HeroSection = () => {
               Entre em Contato
             </Button>
 
-            <Button
-              variant="outline"
-              size="lg"
-              className="group"
-              href="/docs/cv-ptBR.pdf"
+            <a
+              href="./docs/CV.gif"
               download
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Download className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-              Download CV
-            </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="group"
+              >
+                <Download className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                Download CV
+              </Button>
+            </a>
           </div>
 
           <div className="flex justify-center gap-6">
