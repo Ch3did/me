@@ -3,13 +3,6 @@ import { Badge } from "@/components/ui/badge";
 import profilePhoto from "@/assets/profile-photo.jpg";
 
 const AboutSection = () => {
-  const stats = [
-    { number: "5+", label: "Anos de Experiência" },
-    { number: "50+", label: "Projetos Entregues" },
-    { number: "15+", label: "Tecnologias Dominadas" },
-    { number: "100%", label: "Satisfação dos Clientes" }
-  ];
-
   return (
     <section id="about" className="py-20 px-4">
       <div className="container mx-auto">
@@ -53,21 +46,6 @@ const AboutSection = () => {
               estar atualizado com as melhores práticas e tecnologias emergentes 
               do mercado.
             </p>
-
-            <div className="grid grid-cols-2 gap-6 pt-6">
-              {stats.map((stat, index) => (
-                <Card key={index} className="text-center p-6 hover:shadow-lg transition-all duration-300 hover:scale-105">
-                  <CardContent className="p-0">
-                    <div className="text-3xl font-bold gradient-text mb-2">
-                      {stat.number}
-                    </div>
-                    <div className="text-sm text-muted-foreground">
-                      {stat.label}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
           </div>
         </div>
       </div>

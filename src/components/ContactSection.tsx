@@ -70,55 +70,7 @@ const ContactSection = () => {
                 </Card>
               ))}
             </div>
-
-            <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg p-6">
-              <h4 className="font-semibold mb-2">⚡ Resposta Rápida</h4>
-              <p className="text-sm text-muted-foreground">
-                Costumo responder em até 24 horas. Para projetos urgentes, 
-                me chame no WhatsApp para uma resposta mais rápida.
-              </p>
-            </div>
           </div>
-
-          {/* Contact Form */}
-          <Card className="h-fit">
-            <CardHeader>
-              <CardTitle>Envie uma Mensagem</CardTitle>
-              <CardDescription>
-                Preencha o formulário abaixo e entrarei em contato em breve
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">Nome</label>
-                  <Input placeholder="Seu nome completo" />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">Email</label>
-                  <Input type="email" placeholder="seu@email.com" />
-                </div>
-              </div>
-              
-              <div className="space-y-2">
-                <label className="text-sm font-medium">Assunto</label>
-                <Input placeholder="Assunto da mensagem" />
-              </div>
-              
-              <div className="space-y-2">
-                <label className="text-sm font-medium">Mensagem</label>
-                <Textarea 
-                  placeholder="Conte-me sobre seu projeto ou como posso ajudá-lo..."
-                  rows={5}
-                />
-              </div>
-              
-              <Button variant="hero" size="lg" className="w-full">
-                <Send className="w-5 h-5 mr-2" />
-                Enviar Mensagem
-              </Button>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>
