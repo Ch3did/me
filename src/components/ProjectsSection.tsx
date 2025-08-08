@@ -1,41 +1,51 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github } from "lucide-react";
+import { Github } from "lucide-react";
 
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Sistema de E-commerce Distribuído",
-      description: "Plataforma completa de e-commerce construída com microserviços em Golang e frontend em React. Inclui processamento de pagamentos, gestão de inventário e análise de dados em tempo real.",
-      technologies: ["Golang", "React", "PostgreSQL", "Redis", "Docker", "Kubernetes"],
-      category: "Full-Stack",
-      status: "Concluído",
-      color: "go-cyan"
+      title: "financial-cli",
+      description: "Este projeto é uma releitura do Financial-Manager, originalmente feito em Python, agora reescrito em Go, com arquitetura baseada em DDD",
+      technologies: ["Golang", "Gorm", "Sqlite3"],
+      status: "v1",
+      url: "https://github.com/Ch3did/Financial-cli"
     },
     {
-      title: "Pipeline de Machine Learning",
-      description: "Sistema automatizado de ML para análise preditiva de vendas usando Python. Inclui coleta de dados, feature engineering, treinamento de modelos e deploy automatizado.",
-      technologies: ["Python", "Pandas", "Scikit-learn", "FastAPI", "MLflow", "AWS"],
-      category: "Data Science",
-      status: "Em Produção",
-      color: "python-blue"
+      title: "Monetary Maid",
+      description: "Easie financial control CLI with nubank integration and category selection",
+      technologies: ["Python", "Sqlmodel", "Click", "Sqlite3"],
+      status: "v1",
+      url: "https://github.com/Ch3did/Financial-Manager"
     },
     {
-      title: "API Gateway de Alta Performance",
-      description: "Gateway de API construído em Golang capaz de lidar com 100k+ requisições por segundo. Inclui rate limiting, autenticação JWT e monitoramento em tempo real.",
-      technologies: ["Golang", "Redis", "Prometheus", "Grafana", "Docker"],
-      category: "Backend",
-      status: "Open Source",
-      color: "tech-purple"
+      title: "New-York-Times-Article-Crawler",
+      description: "Crawling the New York Times website and extracting article data. The application uses Selenium and a WebDriver to interact with the website and retrieve information such as the title, description, date, picture, and picture URL. The application also provides filters for data based on month, specific words, and NYT-sections.",
+      technologies: ["Python3", "Selenium", "Pydantic", "Requests"],
+      status: "Complete",
+      url: "https://github.com/Ch3did/New-York-Times-Article-Crawler"
     },
     {
-      title: "Dashboard de Analytics",
-      description: "Dashboard interativo para visualização de métricas de negócio em tempo real. Construído com Python backend e React frontend, processando milhões de eventos.",
-      technologies: ["Python", "React", "InfluxDB", "WebSocket", "Chart.js"],
-      category: "Full-Stack",
-      status: "Concluído",
-      color: "accent"
+      title: "Developer-Allocation-API",
+      description: "A Developer Allocation API é uma aplicação escrita em Django, projetada para gerenciar e realizar a alocação de desenvolvedores de software em projetos. O principal objetivo da API é assegurar que os gerentes de projeto possam alocar desenvolvedores de forma eficiente, levando em conta suas especializações e as necessidades dos projetos.",
+      technologies: ["Python3", "Django", "DRF", "Postgres", "Pytest", "Docker"],
+      status: "Complete",
+      url: "https://github.com/Ch3did/Developer-Allocation-API/"
+    },
+    {
+      title: "me",
+      description: "Este Portifólio",
+      technologies: ["Node", "React", "Vite", "Docker"],
+      status: "Complete",
+      url: "https://github.com/Ch3did/me"
+    },
+    {
+      title: "install",
+      description: "Shell scritp to install tools/configurations for new ubuntu's machine.",
+      technologies: ["Sh"],
+      status: "Complete",
+      url: "https://github.com/Ch3did/Install"
     }
   ];
 
@@ -43,9 +53,7 @@ const ProjectsSection = () => {
     <section id="projects" className="py-20 px-4">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4">
-            Portfolio
-          </Badge>
+          <Badge variant="outline" className="mb-4">Portfolio</Badge>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Projetos em <span className="gradient-text">Destaque</span>
           </h2>
@@ -59,13 +67,10 @@ const ProjectsSection = () => {
             <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-card to-card/50">
               <CardHeader>
                 <div className="flex justify-between items-start mb-2">
-                  <Badge variant="secondary" className="mb-2">
-                    {project.category}
+                  <Badge variant="secondary" className="mb-2">{/* Você pode personalizar categorias se quiser */}
+                    {project.technologies[0] /* Exemplo simples: primeira tech como categoria */}
                   </Badge>
-                  <Badge 
-                    variant="outline" 
-                    className={`border-${project.color} text-${project.color}`}
-                  >
+                  <Badge variant="outline" className="text-primary border-primary">
                     {project.status}
                   </Badge>
                 </div>
@@ -76,42 +81,29 @@ const ProjectsSection = () => {
                   {project.description}
                 </CardDescription>
               </CardHeader>
-              
+
               <CardContent>
                 <div className="space-y-4">
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech, techIndex) => (
-                      <Badge 
-                        key={techIndex} 
-                        variant="outline" 
-                        className="text-xs hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
-                      >
+                      <Badge key={techIndex} variant="outline" className="text-xs hover:bg-primary hover:text-primary-foreground transition-colors duration-200">
                         {tech}
                       </Badge>
                     ))}
                   </div>
-                  
+
                   <div className="flex gap-2 pt-2">
-                    <Button variant="outline" size="sm" className="flex-1">
-                      <Github className="w-4 h-4 mr-2" />
-                      Código
-                    </Button>
-                    <Button variant="default" size="sm" className="flex-1">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Demo
-                    </Button>
+                    <a href={project.url} target="_blank" rel="noopener noreferrer" className="flex-1">
+                      <Button variant="outline" size="sm" className="w-full">
+                        <Github className="w-4 h-4 mr-2" />
+                        Código
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <Button variant="outline" size="lg">
-            <Github className="w-5 h-5 mr-2" />
-            Ver Mais no GitHub
-          </Button>
         </div>
       </div>
     </section>
