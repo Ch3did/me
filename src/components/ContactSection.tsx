@@ -10,20 +10,18 @@ const ContactSection = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "contato@engineer.dev",
-      href: "mailto:contato@engineer.dev"
+      value: "phchedidk@gmail.com",
     },
     {
       icon: Phone,
       label: "WhatsApp",
-      value: "+55 (11) 99999-9999",
-      href: "https://wa.me/5511999999999"
+      value: "+55 (11) 97364-6726",
+      href: "https://wa.me/5511973646726"
     },
     {
       icon: MapPin,
       label: "Localização",
       value: "São Paulo, SP - Brasil",
-      href: "#"
     }
   ];
 
@@ -42,8 +40,9 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Info */}
+      <div className="grid lg:grid-cols-2 gap-16 max-w-5xl mx-auto items-start justify-center">
+  
+          {/* Coluna de Informações de Contato */}
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-bold mb-6">Entre em Contato</h3>
@@ -52,12 +51,10 @@ const ContactSection = () => {
                 consultorias técnicas ou apenas para trocar ideias sobre tecnologia.
               </p>
             </div>
-
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
-                <Card key={index} className="group hover:shadow-lg transition-all duration-300 cursor-pointer">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-4">
+                <Card key={index} className="group hover:shadow-lg p-6 transition-shadow">
+                    <div className="flex flex-col items-center text-center gap-4">
                       <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                         <info.icon className="w-6 h-6 text-primary" />
                       </div>
@@ -66,7 +63,6 @@ const ContactSection = () => {
                         <p className="text-muted-foreground">{info.value}</p>
                       </div>
                     </div>
-                  </CardContent>
                 </Card>
               ))}
             </div>
