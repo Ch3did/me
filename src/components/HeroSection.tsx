@@ -38,9 +38,9 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Especialista em{" "}
+            Desenvolvedor com ênfase em{" "}
             <span className="text-python-blue font-semibold">Python</span> e{" "}
-            <span className="text-go-cyan font-semibold">Golang</span>, criando soluções robustas e escaláveis para problemas complexos.
+            <span className="text-go-cyan font-semibold">Golang</span>,  criando soluções confiáveis e de alta performance.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
