@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Ch3did.github.io/me",
+  "homepage": "https://Ch3did.github.io/me/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
