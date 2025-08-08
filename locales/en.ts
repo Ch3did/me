@@ -47,7 +47,7 @@ const en = {
   reffs:{
     "project1": {
       "title": "Financial Cli",
-      "description": "This project is a rewrite of Financial-Manager, originally made in Python, now rewritten in Go with a DDD-based architecture.",
+      "description": "This project is a rewrite of Monetary Maid, originally made in Python, now rewritten in Go with a DDD-based architecture.",
       "technologies": ["Golang", "Gorm", "Sqlite3"],
       "status": "v1",
       "url": "https://github.com/Ch3did/Financial-cli"
