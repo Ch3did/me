@@ -1,17 +1,25 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Mail, MapPin } from "lucide-react";
+import pt  from "../../locales/pt"
+import en  from "../../locales/en"
 
-const ContactSection = () => {
+
+type Props = {
+  language: "pt" | "en";
+};
+
+const ContactSection =({ language }: Props) => {
+  const texts = language === "pt" ? pt : en;
   const contactInfo = [
     {
       icon: Mail,
-      label: "Email",
+      label: "E-mail",
       value: "phchedidk@gmail.com",
     },
     {
       icon: MapPin,
-      label: "Localização",
+      label: texts.contact.local ,
       value: "São Paulo, SP - Brasil",
     }
   ];
@@ -21,13 +29,13 @@ const ContactSection = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16 max-w-2xl mx-auto">
           <Badge variant="outline" className="mb-4">
-            Contato
+            {texts.contact.tab_name}
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Vamos <span className="gradient-text">Conversar</span>
+            {texts.contact.title_begin} <span className="gradient-text"> {texts.contact.title_end}</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Tem um projeto em mente? Estou sempre aberto para discutir novas oportunidades e desafios interessantes.
+            {texts.contact.intro}
           </p>
         </div>
 

@@ -1,9 +1,15 @@
 import { useCallback } from "react";
 import { Button } from "@/components/ui/button";
-import LanguageSwitcher from "./LanguageSwitcher";
 import { Github, Linkedin, Mail, Download } from "lucide-react";
+import pt  from "../../locales/pt"
+import en  from "../../locales/en"
 
-const HeroSection = () => {
+type Props = {
+  language: "pt" | "en";
+};
+
+const HeroSection = ({ language }: Props) => {
+  const texts = language === "pt" ? pt : en;
   const scrollToContact = useCallback(() => {
     const contactSection = document.getElementById("contact");
     if (contactSection) {
@@ -38,15 +44,15 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Desenvolvedor com ênfase em{" "}
+            {texts.hero.begin}{" "}
             <span className="text-python-blue font-semibold">Python</span> e{" "}
-            <span className="text-go-cyan font-semibold">Golang</span>,  criando soluções confiáveis e de alta performance.
+            <span className="text-go-cyan font-semibold">Golang</span>,  {texts.hero.end}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button variant="hero" size="lg" className="group" onClick={scrollToContact}>
               <Mail className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-              Entre em Contato
+              {texts.hero.button.contact}
             </Button>
 
             <a
@@ -61,7 +67,7 @@ const HeroSection = () => {
                 className="group"
               >
                 <Download className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                Download CV
+                {texts.hero.button.download}
               </Button>
             </a>
           </div>

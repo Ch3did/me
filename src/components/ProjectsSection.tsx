@@ -2,63 +2,27 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Github } from "lucide-react";
+import pt  from "../../locales/pt"
+import en  from "../../locales/en"
 
-const ProjectsSection = () => {
-  const projects = [
-    {
-      title: "Financial Cli",
-      description: "Este projeto é uma releitura do Financial-Manager, originalmente feito em Python, agora reescrito em Go, com arquitetura baseada em DDD",
-      technologies: ["Golang", "Gorm", "Sqlite3"],
-      status: "v1",
-      url: "https://github.com/Ch3did/Financial-cli"
-    },
-    {
-      title: "Monetary Maid",
-      description: "Interface de linha de comando (CLI) para controle financeiro simplificado, com integração ao Nubank e seleção de categorias. A aplicação recebe um arquivo OFX como input, realiza ajustes nos dados e os categoriza automaticamente.",
-      technologies: ["Python", "Sqlmodel", "Click", "Sqlite3"],
-      status: "v1",
-      url: "https://github.com/Ch3did/Financial-Manager"
-    },
-    {
-      title: "New York Times Article Crawler",
-      description: "Raspando o site do New York Times e extraindo dados dos artigos. A aplicação utiliza Selenium e um WebDriver para interagir com o site e recuperar informações como título, descrição, data, imagem e URL da imagem. A aplicação também oferece filtros para os dados com base em mês, palavras específicas e seções do NYT.",
-      technologies: ["Python3", "Selenium", "Pydantic", "Requests"],
-      status: "Complete",
-      url: "https://github.com/Ch3did/New-York-Times-Article-Crawler"
-    },
-    {
-      title: "Developer Allocation-API",
-      description: "A Developer Allocation API é uma aplicação escrita em Django, projetada para gerenciar e realizar a alocação de desenvolvedores de software em projetos. O principal objetivo da API é assegurar que os gerentes de projeto possam alocar desenvolvedores de forma eficiente, levando em conta suas especializações e as necessidades dos projetos.",
-      technologies: ["Python3", "Django", "DRF", "Postgres", "Pytest", "Docker"],
-      status: "Complete",
-      url: "https://github.com/Ch3did/Developer-Allocation-API/"
-    },
-    {
-      title: "Me (Eu)",
-      description: "Este Portifólio que está vendo...",
-      technologies: ["Node", "React", "Vite", "Docker"],
-      status: "Complete",
-      url: "https://github.com/Ch3did/me"
-    },
-    {
-      title: "Install",
-      description: "Shell scritp para instalar ferramentas e setando configurações para novas máquinas Ubuntu.",
-      technologies: ["Sh"],
-      status: "Complete",
-      url: "https://github.com/Ch3did/Install"
-    }
-  ];
+type Props = {
+  language: "pt" | "en";
+};
+
+const ProjectsSection = ({ language }: Props) => {
+  const texts = language === "pt" ? pt : en;
+  const projects = Object.values(texts.reffs);
 
   return (
     <section id="projects" className="py-20 px-4">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4">Portfolio</Badge>
+          <Badge variant="outline" className="mb-4">{texts.projects.tab_name}</Badge>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Projetos em <span className="gradient-text">Destaque</span>
+            {texts.projects.title_begin} <span className="gradient-text">{texts.projects.title_end}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Alguns dos projetos que desenvolvi, mostrando a aplicação prática das minhas habilidades
+            {texts.projects.intro}
           </p>
         </div>
 
