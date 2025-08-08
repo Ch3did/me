@@ -50,8 +50,8 @@ const HeroSection = () => {
             </Button>
 
             <a
-              href="./docs/CV.gif"
-              download
+              href="/docs/CV.gif"
+              download="CV.gif"
               target="_blank"
               rel="noopener noreferrer"
             >
