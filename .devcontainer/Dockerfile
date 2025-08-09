@@ -1,17 +1,19 @@
 FROM node:20
 
-# Cria diretório de trabalho
+# Config ambiente
+RUN apt-get update && apt-get install -y zsh curl git && rm -rf /var/lib/apt/lists/*
+RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+SHELL ["/bin/zsh", "-c"]
+
+# Ajusta o diretório de trabalho
 WORKDIR /app
 
 # Copia package.json e instala dependências
 COPY package*.json ./
 RUN npm install
 
-# Copia o resto da aplicação
 COPY . .
 
-# Exponha a porta do Vite
 EXPOSE 5173
 
-# Comando padrão
-CMD ["npm", "run", "dev", "--", "--host"]
+CMD ["zsh"]
